@@ -70,17 +70,25 @@ img {
     align-items: center;
     width: 44px;
     height: 44px;
-    background-color: #FFFFFF;
+    border-radius: 50%;
+    background-color: #FFFFFF; 
+}
+
+.social-list-link:hover,
+.social-list-link:focus { 
+  background-color: var(--accent); 
 }
 
 .social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon{
-    fill: var(--accent);
+.social-list-link:focus .social-list-icon {
+  fill: var(--white);
 }
+
 
   .social-list-icon {
     width: 20px;
     height: 20px;
+    fill: #AFB1B8;
 }
 
 /* header */
@@ -451,6 +459,7 @@ ul {
 
     margin-left: 0px;
     margin-right: 0px;
+    margin-bottom: 16px;
 }
 
 
