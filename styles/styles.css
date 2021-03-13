@@ -138,20 +138,16 @@ ul {
     align-items: center;
     margin-bottom: 0px;
     margin-top: 0px;
-    /* background-color: greenyellow; */
 } 
 
 .header-nav .nav-link:not(:last-child) {
     margin-right: 50px;
   }
 
- .header-nav  {
+ .header-nav {
     list-style: none;
     display: flex;
     margin-left: 93px;
-
-    /* margin-top: 32px;
-    margin-bottom: 32px; */
   }
 
 .header-nav .link{
@@ -164,8 +160,8 @@ ul {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-
 }
+
 .header-nav .currentlink{
     color: var(--secondarytext);
     font-weight: 500;
@@ -189,77 +185,41 @@ ul {
 .header-nav .link:active {
         color: var(--accent);
 }
-/* .social-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: #FFFFFF; 
-}
-  .social-list-icon {
-    width: 20px;
-    height: 20px;
-    fill: #AFB1B8; */
-
 .header-contacts {
     display: flex;
     align-items: center;
     margin-left: auto;
 }
-.header-contacts{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.contact-icon-email {
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    fill: #757575;
-}
 
-.contact-icon-tel {
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    fill: #757575;
-}
-.header-contacts .header-email {
+.header-contact:not(:last-child){
     margin-right: 50px;
 }
 
-.contact-icon-email:hover,
-.contact-icon-tel:hover,
-.contact-icon-email:focus,
-.contact-icon-tel:focus {
-    fill: var(--accent);
-}
-
-.header-contacts .link{
-    color: var(--maintext);
+.header-contacts-link {
+    display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.15;
     letter-spacing: 0.02em;
-    text-decoration: none;
-
-    display: inline-block;
 
     padding-top: 32px;
     padding-bottom: 32px;
+
+    color: var(--maintext);
+    fill: var(--maintext);
+
+    text-decoration: none;
+}
+.contact-icon-tel,
+.contact-icon-email {
+    margin-right: 10px;
 }
 
-.header-contacts .link:hover,
-.header-contacts .link:focus{
+.header-contacts-link:hover,
+.header-contacts-link:focus {
     color: var(--accent);
-    cursor: pointer;  
+    fill: var(--accent);
 }
 
 /* main title section */
@@ -517,11 +477,9 @@ ul {
     list-style: none;
 }
 /* client section */
-
 .clients {
     padding-top: 94px;
     padding-bottom: 94px;
-    outline: 2px solid red;
 }
 .clients-title {
     color: var(--secondarytext);
@@ -532,78 +490,47 @@ ul {
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 50px;
-
-    margin-left: 0px;
-    margin-right: 0px;
-
 }
+
 .clients-list {
     display: flex;
     align-items: center;
+    margin-left: -30px;
+    margin-top: -30px;
 }
 
-.client-thumbnail {
+.client-list-item {
+    flex-basis: calc(100% / 6 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.client-list-icon {
+    fill: #AFB1B8;
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+    border-color: var(--accent);
+}
+
+.clients-list-link {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     width: 170px;
     height: 90px;
-    outline: 1px solid #AFB1B8;
+    border: 1px solid #afb1b8;
     box-sizing: border-box;
     border-radius: 4px;
 }
 
-.client-list-item:not(:last-child) {
-    margin-right: 30px;
+.clients-list-link:hover .client-list-icon,
+.clients-list-link:focus .client-list-icon{
+    fill: var(--accent);
 }
-
-.client-list-icon{
-    fill: #757575;
-
-}
-
-.clients-list-link {
-    width: 100%;
-    height: 100%;
-}
-
-/* .social-list {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background-color: #FFFFFF; 
-}
-
-.social-list-link:hover,
-.social-list-link:focus { 
-  background-color: var(--accent); 
-}
-
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-  fill: var(--white);
-}
-
-
-  .social-list-icon {
-    width: 20px;
-    height: 20px;
-    fill: #AFB1B8;
-} */
-
-
-
-
 /* footer */
+
 .main-footer{
     background-color: var(--backgroundfootertitle);
 }
@@ -613,17 +540,26 @@ ul {
 .main-footer{
     padding: 60px 0;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    /* outline: 2px solid green; */
+    align-items: center;
 }
 
+.contacts {
+    margin-right: 70px;
+}
+
+.footer-contacts-container {
+    display: flex;
+    align-items: baseline;
+
+}
+
+/* LOGO START */
 .footer-logo{
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     text-decoration: none;
-    /* outline: 2px solid green; */
     
 }
 .logoblue{
@@ -650,8 +586,8 @@ ul {
 .footer-logo:focus{
     cursor: pointer;
 }
+/* LOGO END */
 
-/* .main-footer :hover, */
 .main-footer :focus{
     color: var(--accent);
     cursor: pointer;
@@ -682,23 +618,70 @@ ul {
 .footer-item:not(:first-child){
     margin-top: 9px;
 }
+
 .footer-contacts { 
     display: block;
     list-style: none;
     margin-top: 9px;
-   
 }
-
 
 .footer-address{
     margin-top: 20px;
 }
 
+.footer-social-links {
+    display: block;
+    align-items: baseline;
+
+}
+
+.footer-title {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.footer-social-list-icon {
+    width: 20px;
+    height: 20px;
+    fill: var(--white);
+}
+
+.footer-social-list {
+    display: flex;
+    align-items: center;
+}
+
+.footer-social-list-item:not(:last-child){
+    margin-right: 10px;
+}
+
+.footer-social-list-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+    background-color: var(--accent);
+}
+
+
+
 /* portfolio page */
 .portfolio {
     margin-top: 94px;
-    margin-bottom: 94px;
-    
+    margin-bottom: 94px;  
 }
 
 .porfolio .container {
@@ -706,10 +689,6 @@ ul {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 94px;
-    /* padding-top: 94px; */
-
-    /* padding-left: 0px;
-    padding-right: 0px; */
 }
 
 .filters {
@@ -718,13 +697,7 @@ ul {
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-    /* padding-top: 94px; */
 } 
-
-/* .filter{
-    display: flex;
-    justify-content: center; 
-} */
 
 .filter-item {
     align-content: center;
@@ -743,7 +716,6 @@ ul {
     text-align: center;
     letter-spacing: 0.03em;
     background-color: var(--backgroundbuttons);
-    
     border-radius: 4px;
     padding: 6px 22px;
     outline: none;
@@ -769,17 +741,12 @@ ul {
 }
 
 .portfolio-list {
-    width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    /* margin-bottom: 94px; */
-
-    padding-left: 0px;
-    padding-right: 0px;
-
     display: flex; 
     flex-wrap: wrap;
-    
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0px;
+    padding-right: 0px;
     justify-content: space-between;
 }
 
@@ -788,6 +755,14 @@ ul {
     border: 1px solid #EEEEEE; 
     box-sizing: border-box;
     max-width: 370px;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
 }
 
 .portfolio-item:nth-child(-n + 6){
@@ -805,7 +780,6 @@ ul {
     padding-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
-    /* outline: 2px solid red; */
 }
 
 .portfolio-subtitle{
@@ -815,12 +789,8 @@ ul {
     font-size: 18px;
     line-height: 36px;
     letter-spacing: 0.06em;
-
-    /* margin-top: 20px; */
     margin-bottom: 4px;
     text-align: left;
-    /* padding-left: 24px; */
-
 }
 
 .portfolio-text{
@@ -829,16 +799,7 @@ ul {
     font-size: 16px;
     line-height: 30px;
     letter-spacing: 0.03em;
-
     text-align: left;
-    /* padding-left: 24px; */
-    /* padding-bottom: 20px; */
- 
-}
-
-.portfolio-listing :hover,
-.portfolio-listing :focus{
-    cursor: pointer;
 }
 
 .portfolio-listing{
