@@ -581,6 +581,12 @@ ul {
 .footer-logo:focus{
     cursor: pointer;
 }
+
+.footer-item:hover .link,
+.footer-item:focus .link{
+    color: var(--accent);
+    cursor: pointer;
+}
 /* LOGO END */
 
 .main-footer :focus{
@@ -685,7 +691,7 @@ ul {
     margin-right: auto;
     margin-bottom: 94px;
 }
-
+/* FILTER */
 .filters {
     display: flex;
     flex-wrap: wrap;
@@ -734,49 +740,46 @@ ul {
     cursor: pointer;
     text-decoration: none;
 }
+/* FILTER END */
 
+/* PORTFOLIO CARDS */
 .portfolio-list {
     display: flex; 
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0px;
-    padding-right: 0px;
-    justify-content: space-between;
+    margin-left: -30px;
+    margin-top: -30px;
 }
-
 .portfolio-item {
-    background: var(--backgroundheader);
-    border: 1px solid #EEEEEE; 
+    flex-basis: calc(100% / 3 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+    border: 1px solid #EEEEEE;
     box-sizing: border-box;
     max-width: 370px;
 }
-
-.portfolio-item:hover,
-.portfolio-item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
-}
-
-.portfolio-item:nth-child(-n + 6){
-    margin-bottom: 30px;
-}
-
 .portfolio-img {
     display: block;
     max-width: 367px;
 }
-
+.portfolio-listing{
+    text-decoration: none;
+}
 .portfolio-descr {
     display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 20px 24px;
 }
-
+.portfolio-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+.portfolio-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
 .portfolio-subtitle{
     color: var(--secondarytext);
     font-family: 'Roboto', sans-serif;
@@ -787,7 +790,6 @@ ul {
     margin-bottom: 4px;
     text-align: left;
 }
-
 .portfolio-text{
     color: var(--maintext);
     font-family: 'Roboto', sans-serif;
@@ -796,7 +798,4 @@ ul {
     letter-spacing: 0.03em;
     text-align: left;
 }
-
-.portfolio-listing{
-    text-decoration: none;
-}
+/* PORTFOLIO CARDS END */
